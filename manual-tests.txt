@@ -61,4 +61,14 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 ## Expected results
 * Should display "Developer" for the user name.
 
+# Module 4: Fixing input validation for card numbers
 
+## Test steps
+1. Build and run Cico.
+2. Enter the characters "abcd" into the card field.
+3. Click Update.
+
+## Expected results
+* Should ignore non-numerical input and not proceed with any action.
+* No changes should occure in the GUI panels.
+* There should be no error messages displayed.
