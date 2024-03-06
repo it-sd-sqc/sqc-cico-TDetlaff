@@ -4,6 +4,8 @@ package edu.cvtc.itsd;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.sql.*;
 import java.util.TimerTask;
 import javax.swing.*;
@@ -259,13 +261,21 @@ public class Main {
     fieldNumber.setBackground(Color.green);
     fieldNumber.setForeground(Color.magenta);
     panelMain.add(fieldNumber);
+    fieldNumber.addKeyListener(new KeyAdapter() {
+      @Override
+      public void keyReleased(KeyEvent e) {
+        if (fieldNumber.getText().length() == 8) {
+          processCard();
+        }
+      }
+    });
 
-    JButton updateButton = new JButton("Update");
-    updateButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    updateButton.addActionListener(new Update());
-    updateButton.setForeground(Color.green);
-    panelMain.add(updateButton);
 
+    //JButton updateButton = new JButton("Update");
+    //updateButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+    //updateButton.addActionListener(new Update());
+    //updateButton.setForeground(Color.green);
+    //panelMain.add(updateButton);
     panelMain.add(Box.createVerticalGlue());
 
     // Status panel ///////////////////////////////////////////////////////////

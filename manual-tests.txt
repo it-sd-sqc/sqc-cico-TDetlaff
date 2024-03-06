@@ -70,3 +70,11 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 ## Expected results
 * Should display button to manually timeout the system back to the main panel
 
+# Module 6: Automatically forward user after last digit in ID is entered
+
+## Test step
+1. Build and run CiCo.
+2. Enter 00000000 into field
+
+## Expected Results
+* User should be forwarded back to login screen after last digit is entered
